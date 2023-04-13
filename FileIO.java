@@ -2,8 +2,9 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 public class FileIO {
-    public void readTrashCan() {
+    public IBag<Garbage> readTrashCan() {
         String fileName = "garbage.txt";
+        IBag<Garbage> TrashCan = new TrashCan();
         try {
             Scanner scanner = new Scanner(new File(fileName));
             while (scanner.hasNextLine()) {
@@ -20,5 +21,6 @@ public class FileIO {
         catch(FileNotFoundException e){
             e.printStackTrace();
         }
+        return TrashCan;
     }
 }
