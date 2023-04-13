@@ -1,26 +1,33 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class FileIO {
-    public IBag<Garbage> readTrashCan() {
-        String fileName = "garbage.txt";
-        IBag<Garbage> TrashCan = new TrashCan();
+    public IBag<Garbage> readTrashCan(){
+        @SuppressWarnings("unchecked")
+        IBag<Garbage> trashCan = new TrashCan();
         try {
-            Scanner scanner = new Scanner(new File(fileName));
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                int unit = line.lastIndexOf(",");
-                line = line.replace("," + unit, "");
-                for (int i = 0; unit > i; i++) {
-                    Garbage Garbage = new Garbage(line);
-                    TrashCan.add(Garbage);
+            BufferedReader reader = new BufferedReader(new FileReader("garbage.txt"));
+            String line;
+            while((line = reader.readLine()) != null) {
+                String[] garbage = line.split(",");
+                int amount = Integer.parseInt(garbage[2].trim());
+                for (int i = 0; i < amount; i++) {
+                    trashCan.add(new Garbage(garbage[0].trim(), garbage[1].trim()));
                 }
             }
-            scanner.close();
-        }
-        catch(FileNotFoundException e){
+            reader.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        return TrashCan;
+        return trashCan;
     }
+
+
+    public boolean updateTrashCan() {
+        return false;
+    }
+
+
 }
