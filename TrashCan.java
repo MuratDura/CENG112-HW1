@@ -1,7 +1,7 @@
 
 public class TrashCan implements IBag {
 
-    private Garbage[] trashCan;
+    private final Garbage[] trashCan;
     private int numberOfEntries;
     private static final int CAPACITY = 450;
 
