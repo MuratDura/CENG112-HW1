@@ -1,3 +1,5 @@
+import jdk.dynalink.NamedOperation;
+
 public class Garbage {
 
     private String name;
@@ -5,14 +7,15 @@ public class Garbage {
     private String amount;
 
 
-    public Garbage(String name, String type) {
+    public Garbage(String name, String type,String amount) {
         this.name = name;
         this.type = type;
+        this.amount = amount;
     }
 
     @Override
     public String toString() {
-        return name + ", " + type;
+        return name + "," + type + "," + amount;
     }
 
     public boolean equals(Object obj) {

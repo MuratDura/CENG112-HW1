@@ -1,4 +1,4 @@
-
+import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class FileIO {
                 String[] garbage = line.split(",");
                 int amount = Integer.parseInt(garbage[2].trim());
                 for (int i = 0; i < amount; i++) {
-                    trashCan.add(new Garbage(garbage[0].trim(), garbage[1].trim()));
+                    trashCan.add(new Garbage(garbage[0].trim(),garbage[1].trim(),garbage[2].trim()));
                 }
             }
             reader.close();
@@ -28,6 +28,5 @@ public class FileIO {
     public boolean updateTrashCan() {
         return false;
     }
-
-
 }
+
