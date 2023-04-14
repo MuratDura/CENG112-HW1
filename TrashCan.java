@@ -119,6 +119,15 @@ public class TrashCan implements IBag {
         }
         return result;
     }
+
+    public boolean separate(Object item){
+        String garbageType = item.toString();
+        int index = garbageType.indexOf(",");
+        garbageType = garbageType.substring(index + 1);
+        System.out.println(garbageType);
+        return true;
+
+    }
 }
 
 
