@@ -13,9 +13,7 @@ public class GlassRecycleBin implements IBag{
         numberOfEntries = 0;
     }
 
-    public int getCapacity(){
-        return capacity;
-    }
+
 
 
 

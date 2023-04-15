@@ -14,9 +14,7 @@ public class PaperRecycleBin implements IBag{
         numberOfEntries = 0;
     }
 
-    public int getCapacity(){
-        return capacity;
-    }
+
 
 
 

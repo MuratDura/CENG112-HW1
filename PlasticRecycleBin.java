@@ -28,7 +28,6 @@ public class PlasticRecycleBin implements IBag {
         }
         return result;
     }
-    public int getCapacity(){return capacity;}
 
 
     @Override
