@@ -1,3 +1,4 @@
+import javax.swing.*;
 
 public class TrashCan implements IBag {
 
@@ -9,6 +10,7 @@ public class TrashCan implements IBag {
     public TrashCan() {
         trashCan = new Garbage[CAPACITY];
         numberOfEntries = 0;
+
     }
 
 
@@ -120,14 +122,18 @@ public class TrashCan implements IBag {
         return result;
     }
 
-    public boolean separate(Object item){
-        String garbageType = item.toString();
-        int index = garbageType.indexOf(",");
-        garbageType = garbageType.substring(index + 1);
-        System.out.println(garbageType);
-        return true;
+    public boolean separate(Garbage item){
+        TrashCan emptyTrashcan = new TrashCan();
+        boolean result = true;
+        String garb = item.toString();
+        String[] garbage = garb.split(",");
+        String type = garbage[1].trim();
+        System.out.println(type);
+
+        return result;
+    }
 
     }
-}
+
 
 
