@@ -12,7 +12,7 @@ public class Garbage {
         this.type = type;
         this.amount = amount;
     }
-
+    public String getType(){return type;}
     @Override
     public String toString() {
         return name + "," + type + "," + amount;

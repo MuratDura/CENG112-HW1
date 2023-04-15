@@ -106,7 +106,6 @@ public class PaperRecycleBin implements IBag{
         }
     }
 
-
     @Override
     public void dump() {
         while (!isEmpty()) {

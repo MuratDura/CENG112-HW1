@@ -15,7 +15,7 @@ public class OrganicRecycleBin implements IBag{
     }
 
 
-
+    public int getCapacity(){return capacity;}
 
     @Override
     public boolean add(Object newItem) {

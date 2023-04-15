@@ -28,6 +28,7 @@ public class PlasticRecycleBin implements IBag {
         }
         return result;
     }
+    public int getCapacity(){return capacity;}
 
 
     @Override
@@ -110,7 +111,7 @@ public class PlasticRecycleBin implements IBag {
         }
     }
 
-    public boolean transferTo(IBag targetBag, Object item) {
+    public boolean transferTo(IBag<Garbage> targetBag, Garbage item) {
         boolean result = true;
         if (!targetBag.isFull()) {
             targetBag.add(item);

@@ -12,36 +12,12 @@ public class GarbageRecyclingApp {
         FabricRecycleBin fabricBin = new FabricRecycleBin();
         GlassRecycleBin glassBin = new GlassRecycleBin();
 
+        System.out.println("Trash can size is "+trashcan.getCapacity()+" and contents:\n");
+        trashcan.displayItems();
 
-        while(!trashcan.isEmpty()){
-            Garbage garbage = trashcan.remove();
-            String garb = garbage.toString();
-            String[] GarbageList = garb.split(",");
-            System.out.println(GarbageList);
-            if (garbage.equals("plastic")) {
-                if (plasticBin.add(new Garbage(GarbageList[0], GarbageList[1], GarbageList[2]))) {
-                    continue;
-                } else updatedTrashcan.add( new Garbage(GarbageList[0].trim(), GarbageList[1].trim(), GarbageList[2].trim()));
-            }
-            if (garbage.equals("metal")) {
-                if (metalBin.add(garbage)) {continue;}
-                else updatedTrashcan.transferTo(updatedTrashcan,garbage);}
-            if (garbage.equals("glass")) {
-                if (glassBin.transferTo(glassBin, garbage)) {continue;}
-                else updatedTrashcan.transferTo(updatedTrashcan,garbage);}
-            if (garbage.equals("paper")) {
-                if (paperBin.transferTo(paperBin, garbage)) {continue;}
-                else updatedTrashcan.transferTo(updatedTrashcan,garbage);}
-            if (garbage.equals("organic")) {
-                if (organicBin.transferTo(organicBin, garbage)) {continue;}
-                else updatedTrashcan.transferTo(updatedTrashcan,garbage);}
-            if (garbage.equals("fabric")) {
-                if (fabricBin.transferTo(fabricBin, garbage)) {continue;}
-                else updatedTrashcan.transferTo(updatedTrashcan,garbage);}
-            }
+        trashcan.separate(plasticBin);
         plasticBin.displayItems();
+        System.out.println(plasticBin.getItemCount());
             }
 
     }
-
-

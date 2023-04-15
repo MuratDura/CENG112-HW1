@@ -110,6 +110,7 @@ public class TrashCan implements IBag {
             remove();
         }
     }
+    public int getCapacity(){return CAPACITY;}
 
 
     public boolean transferTo(IBag targetBag, Object item) {
@@ -122,14 +123,14 @@ public class TrashCan implements IBag {
         return result;
     }
 
-    public boolean separate(Garbage item){
-        TrashCan emptyTrashcan = new TrashCan();
-        boolean result = true;
-        String garb = item.toString();
-        String[] garbage = garb.split(",");
-        String type = garbage[1].trim();
-        System.out.println(type);
-
+    public boolean separate(IBag<Garbage> targetBag){
+        boolean result = false;
+        for (Garbage garbage : trashCan){
+            if (targetBag.getClass().getName().toLowerCase().contains(garbage.getType())){
+                transferTo(targetBag,garbage);
+            }
+            result = targetBag.isFull();
+        }
         return result;
     }
 

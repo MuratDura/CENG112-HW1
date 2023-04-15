@@ -11,6 +11,6 @@ public interface IBag<T> {
     public boolean contains(T item);
     public void displayItems();
     public void dump(); // removes all the items from the bag
-
+    public int getCapacity();
 
 }

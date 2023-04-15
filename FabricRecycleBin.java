@@ -103,7 +103,6 @@ public class FabricRecycleBin implements IBag {
         }
     }
 
-
     @Override
     public void dump() {
         while (!isEmpty()) {

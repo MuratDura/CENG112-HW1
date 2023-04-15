@@ -28,6 +28,7 @@ public class MetalRecycleBin implements IBag{
         return result;
     }
 
+    public int getCapacity(){return capacity;}
 
     @Override
     public boolean isEmpty() {
