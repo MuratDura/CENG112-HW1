@@ -30,12 +30,12 @@ public class FileIO {
     public boolean updateTrashCan(IBag<Garbage> trashCan) {
         boolean result = true;
         try {
-            FileWriter myWriter = new FileWriter("updated-garbage.txt");
+            FileWriter trashCanWriter = new FileWriter("updated-garbage.txt");
             while (!trashCan.isEmpty()) {
                 String garbage = trashCan.remove().toString();
-                myWriter.write(garbage + "\n"); // Her öğeyi dosyaya bir satırda yazdır
+                trashCanWriter.write(garbage + "\n");
             }
-            myWriter.close();
+            trashCanWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
