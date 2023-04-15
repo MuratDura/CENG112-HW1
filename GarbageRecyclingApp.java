@@ -40,6 +40,7 @@ public class GarbageRecyclingApp {
 
         System.out.println("Updated trash can size is "+trashcan.getItemCount()+" and contents:\n");
         trashcan.displayItems();
-            }
 
+        file.updateTrashCan(trashcan);
+            }
     }
