@@ -16,12 +16,12 @@ public class GarbageRecyclingApp {
         while(!trashcan.isEmpty()){
             Garbage garbage = trashcan.remove();
             String garb = garbage.toString();
-            String[] garbagelist = garb.split(",");
-            String type = garbagelist[1].trim();
+            String[] GarbageList = garb.split(",");
+            System.out.println(GarbageList);
             if (garbage.equals("plastic")) {
-                if (plasticBin.transferTo(plasticBin, garbage)) {
+                if (plasticBin.add(new Garbage(GarbageList[0], GarbageList[1], GarbageList[2]))) {
                     continue;
-                } else updatedTrashcan.transferTo(updatedTrashcan, garbage);
+                } else updatedTrashcan.add( new Garbage(GarbageList[0].trim(), GarbageList[1].trim(), GarbageList[2].trim()));
             }
             if (garbage.equals("metal")) {
                 if (metalBin.add(garbage)) {continue;}
@@ -39,7 +39,7 @@ public class GarbageRecyclingApp {
                 if (fabricBin.transferTo(fabricBin, garbage)) {continue;}
                 else updatedTrashcan.transferTo(updatedTrashcan,garbage);}
             }
-        organicBin.displayItems();
+        plasticBin.displayItems();
             }
 
     }
