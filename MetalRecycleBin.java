@@ -69,7 +69,6 @@ public class MetalRecycleBin implements IBag{
 
 
 
-
     @Override
     public int getItemCount() {
         return numberOfEntries;

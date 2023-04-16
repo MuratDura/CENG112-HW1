@@ -1,4 +1,3 @@
-
 public class TrashCan implements IBag {
 
     private final Garbage[] trashCan;
@@ -98,7 +97,7 @@ public class TrashCan implements IBag {
 
     public void displayItems() {
         for (Garbage garbage : trashCan) {
-            if (garbage != null){
+            if (garbage != null) {
                 System.out.println(garbage);
             }
         }

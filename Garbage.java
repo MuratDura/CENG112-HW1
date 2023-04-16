@@ -2,7 +2,7 @@ public class Garbage {
 
     private String name;
     private String type;
-    private String amount;
+    private int amount;
 
 
     public String getType() {
@@ -19,10 +19,10 @@ public class Garbage {
 
     @Override
     public String toString() {
-        return name + ", " + type;
+        return name + ", " + type ;
     }
 
     public boolean equals(Garbage obj) {
-        return false;
+        return this.name.equals(obj.getName());
     }
 }

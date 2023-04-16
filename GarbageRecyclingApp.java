@@ -12,7 +12,7 @@ public class GarbageRecyclingApp {
 
 
         System.out.println("The size of Trash Can is: " + trashCan.getItemCount() +
-                " and the contents are:\n");
+                " and the contents are:");
         trashCan.displayItems();
         System.out.println("--------------------------------------------");
         trashCan.separate(paperRecycleBin);
@@ -45,24 +45,13 @@ public class GarbageRecyclingApp {
                 " and the contents are:\n");
         fabricRecycleBin.displayItems();
         System.out.println("--------------------------------------------\n");
-        System.out.print("The size of Updated Trash Can is: " + trashCan.getItemCount() +
-                " and the contents are:\n");
+        System.out.println("The size of Updated Trash Can is: " + trashCan.getItemCount() +
+                " and the contents are:");
         trashCan.displayItems();
         System.out.println("--------------------------------------------\n");
         if (file.updateTrashCan(trashCan)){
             System.out.println("Garbage sorted successfully");
         }
-
-
-
-
-
-
-
-
-
-
-
 
     }
 

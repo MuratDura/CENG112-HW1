@@ -1,10 +1,5 @@
 walnut peel, organic
 walnut peel, organic
-walnut peel, organic
-walnut peel, organic
-walnut peel, organic
-walnut peel, organic
-walnut peel, organic
 watermelon peel, organic
 pear peel, organic
 pear peel, organic
@@ -175,11 +170,11 @@ t-shirt, fabric
 t-shirt, fabric
 t-shirt, fabric
 t-shirt, fabric
-t-shirt, fabric
-trousers, fabric
-trousers, fabric
-trousers, fabric
-trousers, fabric
+walnut peel, organic
+walnut peel, organic
+walnut peel, organic
+walnut peel, organic
+walnut peel, organic
 hazelnut peel, organic
 hazelnut peel, organic
 hazelnut peel, organic
