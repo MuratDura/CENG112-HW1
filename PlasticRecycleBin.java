@@ -9,9 +9,9 @@ public class PlasticRecycleBin implements IBag {
 
     public PlasticRecycleBin() {
         Random random = new Random();
-        capacity = (random.nextInt(3)+1)*5;
-        plasticRecycleBin = new Garbage[capacity];
-        numberOfEntries = 0;
+        this.capacity = (random.nextInt(3)+1)*5;
+        this.plasticRecycleBin = new Garbage[capacity];
+        this.numberOfEntries = 0;
     }
 
 
@@ -98,7 +98,9 @@ public class PlasticRecycleBin implements IBag {
 
     public void displayItems() {
         for (Garbage garbage : plasticRecycleBin) {
-            System.out.println(garbage);
+            if (!(garbage==null)) {
+                System.out.println(garbage);
+            }
         }
     }
 
@@ -110,7 +112,7 @@ public class PlasticRecycleBin implements IBag {
         }
     }
 
-    public boolean transferTo(IBag<Garbage> targetBag, Garbage item) {
+    public boolean transferTo(IBag targetBag, Object item) {
         boolean result = true;
         if (!targetBag.isFull()) {
             targetBag.add(item);

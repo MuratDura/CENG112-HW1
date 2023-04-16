@@ -29,7 +29,6 @@ public class MetalRecycleBin implements IBag{
     }
 
 
-
     @Override
     public boolean isEmpty() {
         return numberOfEntries == 0;

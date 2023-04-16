@@ -1,11 +1,9 @@
-import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class FileIO {
-
     public IBag<Garbage> readTrashCan(){
         @SuppressWarnings("unchecked")
         IBag<Garbage> trashCan = new TrashCan();
@@ -16,7 +14,7 @@ public class FileIO {
                 String[] garbage = line.split(",");
                 int amount = Integer.parseInt(garbage[2].trim());
                 for (int i = 0; i < amount; i++) {
-                    trashCan.add(new Garbage(garbage[0].trim(),garbage[1].trim(),garbage[2].trim()));
+                    trashCan.add(new Garbage(garbage[0].trim(), garbage[1].trim()));
                 }
             }
             reader.close();
@@ -41,5 +39,6 @@ public class FileIO {
         }
         return result;
     }
-}
 
+
+}

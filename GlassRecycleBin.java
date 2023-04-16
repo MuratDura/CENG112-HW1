@@ -8,12 +8,14 @@ public class GlassRecycleBin implements IBag{
 
     public GlassRecycleBin() {
         Random random = new Random();
-        capacity = (random.nextInt(3) + 1)*5;
-        glassRecycleBin = new Garbage[capacity];
-        numberOfEntries = 0;
+        this.capacity = (random.nextInt(3) + 1)*5;
+        this.glassRecycleBin = new Garbage[capacity];
+        this.numberOfEntries = 0;
     }
 
-
+    public int getCapacity(){
+        return capacity;
+    }
 
 
 
@@ -119,4 +121,3 @@ public class GlassRecycleBin implements IBag{
         return result;
     }
 }
-

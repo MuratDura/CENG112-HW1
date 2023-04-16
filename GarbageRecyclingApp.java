@@ -2,47 +2,64 @@ public class GarbageRecyclingApp {
 
     public static void main(String[] args) {
         FileIO file = new FileIO();
-        TrashCan trashcan =  (TrashCan) file.readTrashCan();
+        TrashCan trashCan = (TrashCan) file.readTrashCan();
+        PaperRecycleBin paperRecycleBin = new PaperRecycleBin();
+        GlassRecycleBin glassRecycleBin = new GlassRecycleBin();
+        PlasticRecycleBin plasticRecycleBin = new PlasticRecycleBin();
+        OrganicRecycleBin organicRecycleBin = new OrganicRecycleBin();
+        MetalRecycleBin metalRecycleBin = new MetalRecycleBin();
+        FabricRecycleBin fabricRecycleBin = new FabricRecycleBin();
 
-        MetalRecycleBin metalBin = new MetalRecycleBin();
-        OrganicRecycleBin organicBin = new OrganicRecycleBin();
-        PaperRecycleBin paperBin = new PaperRecycleBin();
-        PlasticRecycleBin plasticBin = new PlasticRecycleBin();
-        FabricRecycleBin fabricBin = new FabricRecycleBin();
-        GlassRecycleBin glassBin = new GlassRecycleBin();
 
-        System.out.println("Trash can size is "+trashcan.getItemCount()+" and contents:\n");
-        trashcan.displayItems();
-
-        System.out.println("\nMetal recycle bin size is "+metalBin.getItemCount()+" and contents:\n");
-        trashcan.separate(metalBin);
-        metalBin.displayItems();
-
-        System.out.println("\nPaper recycle bin size is "+paperBin.getItemCount()+" and contents:\n");
-        trashcan.separate(paperBin);
-        paperBin.displayItems();
-
-        System.out.println("\nOrganic recycle bin size is "+organicBin.getItemCount()+" and contents:\n");
-        trashcan.separate(organicBin);
-        organicBin.displayItems();
-
-        System.out.println("\nPlastic recycle bin size is "+plasticBin.getItemCount() +" and contents:\n");
-        trashcan.separate(plasticBin);
-        plasticBin.displayItems();
-
-        System.out.println("\nFabric recycle bin size is "+fabricBin.getItemCount()+" and contents:\n");
-        trashcan.separate(fabricBin);
-        fabricBin.displayItems();
-
-        System.out.println("\nGlass recycle bin size is "+glassBin.getItemCount()+" and contents:\n");
-        trashcan.separate(glassBin);
-        glassBin.displayItems();
-
-        System.out.println("Updated trash can size is "+trashcan.getItemCount()+" and contents:\n");
-        trashcan.displayItems();
-
-        if (file.updateTrashCan(trashcan)){
+        System.out.println("The size of Trash Can is: " + trashCan.getItemCount() +
+                " and the contents are:\n");
+        trashCan.displayItems();
+        System.out.println("--------------------------------------------");
+        trashCan.separate(paperRecycleBin);
+        System.out.print("The size of Paper Recycle Bin is: " + paperRecycleBin.getItemCount() +
+                " and the contents are:\n");
+        paperRecycleBin.displayItems();
+        System.out.println("--------------------------------------------\n");
+        trashCan.separate(glassRecycleBin);
+        System.out.print("The size of Glass Recycle Bin is: " + glassRecycleBin.getItemCount() +
+                " and the contents are:\n");
+        glassRecycleBin.displayItems();
+        System.out.println("--------------------------------------------\n");
+        trashCan.separate(plasticRecycleBin);
+        System.out.print("The size of Plastic Recycle Bin is: " + plasticRecycleBin.getItemCount() +
+                " and the contents are:\n");
+        plasticRecycleBin.displayItems();
+        System.out.println("--------------------------------------------\n");
+        trashCan.separate(organicRecycleBin);
+        System.out.print("The size of Organic Recycle Bin is: " + organicRecycleBin.getItemCount() +
+                " and the contents are:\n");
+        organicRecycleBin.displayItems();
+        System.out.println("--------------------------------------------\n");
+        trashCan.separate(metalRecycleBin);
+        System.out.print("The size of Metal Recycle Bin is: " + metalRecycleBin.getItemCount() +
+                " and the contents are:\n");
+        metalRecycleBin.displayItems();
+        System.out.println("--------------------------------------------\n");
+        trashCan.separate(fabricRecycleBin);
+        System.out.print("The size of Fabric Recycle Bin is: " + fabricRecycleBin.getItemCount() +
+                " and the contents are:\n");
+        fabricRecycleBin.displayItems();
+        System.out.println("--------------------------------------------\n");
+        if (file.updateTrashCan(trashCan)){
             System.out.println("Garbage sorted successfully");
         }
-            }
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+}

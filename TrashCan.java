@@ -1,18 +1,17 @@
-import javax.swing.*;
 
 public class TrashCan implements IBag {
 
     private final Garbage[] trashCan;
     private int numberOfEntries;
     private static final int CAPACITY = 450;
+    private int index;
+
 
 
     public TrashCan() {
-        trashCan = new Garbage[CAPACITY];
-        numberOfEntries = 0;
-
+        this.trashCan = new Garbage[CAPACITY];
+        this.numberOfEntries = 0;
     }
-
 
     public static int getCAPACITY() {
         return CAPACITY;
@@ -99,7 +98,9 @@ public class TrashCan implements IBag {
 
     public void displayItems() {
         for (Garbage garbage : trashCan) {
-            System.out.println(garbage);
+            if (garbage != null){
+                System.out.println(garbage);
+            }
         }
     }
 
@@ -110,7 +111,6 @@ public class TrashCan implements IBag {
             remove();
         }
     }
-    public int getCapacity(){return CAPACITY;}
 
 
     public boolean transferTo(IBag targetBag, Garbage item) {
@@ -135,7 +135,8 @@ public class TrashCan implements IBag {
     }
 
 
-    }
 
+
+}
 
 

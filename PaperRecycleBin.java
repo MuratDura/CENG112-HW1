@@ -9,12 +9,14 @@ public class PaperRecycleBin implements IBag{
 
     public PaperRecycleBin() {
         Random random = new Random();
-        capacity = (random.nextInt(3)+1)*5;
-        paperRecycleBin = new Garbage[capacity];
-        numberOfEntries = 0;
+        this.capacity = (random.nextInt(3)+1)*5;
+        this.paperRecycleBin = new Garbage[capacity];
+        this.numberOfEntries = 0;
     }
 
-
+    public int getCapacity(){
+        return capacity;
+    }
 
 
 
@@ -100,9 +102,12 @@ public class PaperRecycleBin implements IBag{
 
     public void displayItems() {
         for (Garbage garbage : paperRecycleBin) {
-            System.out.println(garbage);
+            if (!(garbage==null)) {
+                System.out.println(garbage);
+            }
         }
     }
+
 
     @Override
     public void dump() {

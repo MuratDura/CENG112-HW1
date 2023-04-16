@@ -13,7 +13,9 @@ public class FabricRecycleBin implements IBag {
         numberOfEntries = 0;
     }
 
-
+    public int getCapacity(){
+        return capacity;
+    }
 
 
 
@@ -97,9 +99,12 @@ public class FabricRecycleBin implements IBag {
 
     public void displayItems() {
         for (Garbage garbage : fabricRecycleBin) {
-            System.out.println(garbage);
+            if (garbage != null){
+                System.out.println(garbage);
+            }
         }
     }
+
 
     @Override
     public void dump() {

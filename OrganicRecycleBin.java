@@ -9,9 +9,9 @@ public class OrganicRecycleBin implements IBag{
 
     public OrganicRecycleBin() {
         Random random = new Random();
-        capacity = (random.nextInt(3)+1)*5;
-        organicRecycleBin = new Garbage[capacity];
-        numberOfEntries = 0;
+        this.capacity = (random.nextInt(3)+1)*5;
+        this.organicRecycleBin = new Garbage[capacity];
+        this.numberOfEntries = 0;
     }
 
 
