@@ -45,6 +45,10 @@ public class GarbageRecyclingApp {
                 " and the contents are:\n");
         fabricRecycleBin.displayItems();
         System.out.println("--------------------------------------------\n");
+        System.out.print("The size of Updated Trash Can is: " + trashCan.getItemCount() +
+                " and the contents are:\n");
+        trashCan.displayItems();
+        System.out.println("--------------------------------------------\n");
         if (file.updateTrashCan(trashCan)){
             System.out.println("Garbage sorted successfully");
         }
